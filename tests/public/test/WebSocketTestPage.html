@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocketTestPage</title>
+</head>
+<body>
+    <div>
+        <button value="connect" onclick="connect()">connect</button>
+        <button value="send" onclick="send()">send</button>
+        <button value="close" onclick="close()">close</button>
+    </div>
+
+    <div id="log" style="width: 600px; height: 800px; border: thin">
+    </div>
+
+    <script>
+
+        var socket = new WebSocket('ws://192.168.0.121:8010');
+        var log = document.getElementById('log');
+
+        function connect(){
+
+        }
+
+        //{String|ArrayBuffer|ArrayBufferView|Blob} data
+        function send(){
+            // 发送一个初始化消息
+            var msg = "I am the client and I\'m listening!";
+            //socket.send(msg);
+            //log.innerHTML += 'sending:\n' + msg + '\n';
+
+            var array = new Float32Array(5);
+
+            for (var i = 0; i < array.length; ++i) {
+                array[i] = i / 2;
+            }
+
+            socket.send(array);
+        }
+
+        function close(){
+            socket.close(1000, 'normal');
+        }
+
+        // 打开Socket
+        socket.onopen = function(event) {
+
+            console.log('socket open', event);
+        };
+
+        socket.onmessage = function(event) {
+            console.log('Client received a message',event);
+            log.innerHTML += 'Client received a message:' + '\n' + event + '\n';
+        };
+
+        // 监听Socket的关闭
+        socket.onclose = function(event) {
+            console.log('Client notified socket has closed', event);
+            log.innerHTML += 'socket close:' + event + '\n';
+        };
+
+        // 打开Socket
+        socket.onerror = function(event) {
+
+            console.log('socket error:', event);
+            log.innerHTML += 'socket error:' + event + '\n';
+        };
+    </script>
+</body>
+</html>

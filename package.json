@@ -1,0 +1,30 @@
+{
+  "name": "boot-web",
+  "version": "1.0.0",
+  "description": "A mini web server with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "boot-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaozhiguo2016/boot-web.git"
+  },
+  "keywords": [
+    "webserver",
+    "nodejs",
+    "es6"
+  ],
+  "author": "Stanley.Yao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yaozhiguo2016/boot-web/issues"
+  },
+  "homepage": "https://github.com/yaozhiguo2016/boot-web#readme",
+  "dependencies": {
+    "ejs": "^2.5.1",
+    "formidable": "~1.0.17",
+    "mime": "~1.3.6",
+    "xml2js": "~0.4.0"
+  }
+}

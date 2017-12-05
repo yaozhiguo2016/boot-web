@@ -1,0 +1,114 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.9.4
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'D:\\tech\\MyProjects\\node\\node_step\\boot-web',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\yaozh\AppData\Roaming\npm-cache\boot-web\1.0.0\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\yaozh\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 info lifecycle boot-web@1.0.0~prepublish: boot-web@1.0.0
+11 silly lifecycle boot-web@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'C:\\Users\\yaozh\\AppData\\Roaming\\npm-cache\\boot-web\\1.0.0\\package.tgz',
+12 verbose tar pack   'D:\\tech\\MyProjects\\node\\node_step\\boot-web' ]
+13 verbose tarball C:\Users\yaozh\AppData\Roaming\npm-cache\boot-web\1.0.0\package.tgz
+14 verbose folder D:\tech\MyProjects\node\node_step\boot-web
+15 verbose addLocalTarball adding from inside cache C:\Users\yaozh\AppData\Roaming\npm-cache\boot-web\1.0.0\package.tgz
+16 verbose correctMkdir C:\Users\yaozh\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+17 silly cache afterAdd boot-web@1.0.0
+18 verbose afterAdd C:\Users\yaozh\AppData\Roaming\npm-cache\boot-web\1.0.0\package\package.json not in flight; writing
+19 verbose correctMkdir C:\Users\yaozh\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+20 verbose afterAdd C:\Users\yaozh\AppData\Roaming\npm-cache\boot-web\1.0.0\package\package.json written
+21 silly publish { name: 'boot-web',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: 'A mini web server with nodejs',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'boot-test' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/yaozhiguo2016/boot-web.git' },
+21 silly publish   keywords: [ 'webserver', 'nodejs', 'es6' ],
+21 silly publish   author: { name: 'Stanley.Yao' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/yaozhiguo2016/boot-web/issues' },
+21 silly publish   homepage: 'https://github.com/yaozhiguo2016/boot-web#readme',
+21 silly publish   dependencies:
+21 silly publish    { ejs: '^2.5.1',
+21 silly publish      formidable: '~1.0.17',
+21 silly publish      mime: '~1.3.6',
+21 silly publish      xml2js: '~0.4.0' },
+21 silly publish   readme: '# boot-web\r\nA mini web server with nodejs.\r\n\r\n# example:\r\n<pre><code>\r\n\r\n    const Boot = require(\'../lib/Boot\');\r\n    const Router = require(\'../lib/Router\');\r\n    const BaseAuth = require(\'../filters/BaseAuth\');\r\n    const QueryString = require(\'../filters/QueryString\');\r\n    const Cookie = require(\'../filters/Cookie\');\r\n    const Session = require(\'../filters/Session\');\r\n    const Static = require(\'../filters/Static\');\r\n    const BodyParser = require(\'../filters/BodyParser\');\r\n    \r\n    const EjsTest = require(\'./EjsTest\');\r\n    const RegRouteTest = require(\'./RegRouteTest\');\r\n    \r\n    \r\n    let web = new Boot();\r\n    \r\n    // webServer.setTemplate(\'ejs\');\r\n    // webServer.setTemplateRoot(path.join(__dirname, \'view/tpls\'));\r\n    \r\n    web.use(new BaseAuth());\r\n    web.use(new QueryString());\r\n    web.use(new Cookie());\r\n    web.use(new Session());\r\n    web.use(new Static());\r\n    web.use(new BodyParser());\r\n    \r\n    //app.use(\'/users/:name\', new RouteTest());\r\n    web.use(\'/photo/:up\', new RegRouteTest());\r\n    web.get(\'/test/\', new EjsTest());\r\n    \r\n    web.listen(3015);\r\n</pre></code>\r\n\r\nvisit http://localhost:3015 to see the static index page.\r\n\r\nhttp://localhost:3015/photo/yzg to test the regular expression route match\r\n\r\nhttp://localhost:3015/test/ to test the ejs template file rendering\r\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '959c42ef927dc0892bc6ea240d29a41374b878d7',
+21 silly publish   _id: 'boot-web@1.0.0',
+21 silly publish   _shasum: '61a4ae3a76c52e4a2c24c73d090d63c059abb13b',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name boot-web
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'boot-web',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'boot-web',
+26 silly mapToRegistry   name: 'boot-web',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/boot-web
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading C:\Users\yaozh\AppData\Roaming\npm-cache\boot-web\1.0.0\package.tgz
+30 verbose request uri https://registry.npmjs.org/boot-web
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 01:33:24
+33 verbose request using bearer token for auth
+34 verbose request id 26c263b17b19a0dd
+35 http request PUT https://registry.npmjs.org/boot-web
+36 http 403 https://registry.npmjs.org/boot-web
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '104',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Tue, 05 Dec 2017 17:33:25 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-nrt6146-NRT',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1512495205.291598,VS0,VE670',
+37 verbose headers   vary: 'Accept-Encoding, Accept' }
+38 verbose request invalidating C:\Users\yaozh\AppData\Roaming\npm-cache\registry.npmjs.org\boot-web on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: you must verify your email before publishing a new package: https://www.npmjs.com/email-edit : boot-web
+40 verbose stack     at makeError (C:\Users\yaozh\AppData\Roaming\nvm\v6.9.4\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (C:\Users\yaozh\AppData\Roaming\nvm\v6.9.4\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+40 verbose stack     at Request._callback (C:\Users\yaozh\AppData\Roaming\nvm\v6.9.4\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+40 verbose stack     at Request.self.callback (C:\Users\yaozh\AppData\Roaming\nvm\v6.9.4\node_modules\npm\node_modules\request\request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (C:\Users\yaozh\AppData\Roaming\nvm\v6.9.4\node_modules\npm\node_modules\request\request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (C:\Users\yaozh\AppData\Roaming\nvm\v6.9.4\node_modules\npm\node_modules\request\request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid boot-web
+43 verbose cwd D:\tech\MyProjects\node\node_step\boot-web
+44 error Windows_NT 10.0.14393
+45 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+46 error node v6.9.4
+47 error npm  v3.10.10
+48 error code E403
+49 error you must verify your email before publishing a new package: https://www.npmjs.com/email-edit : boot-web
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
